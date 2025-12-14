@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Oven and Mixed Counter</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #e5e5e5;
+    image-rendering: pixelated;
+}
+
+#game-area {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Background */
+#bg {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: url("https://raw.githubusercontent.com/Raenah-A/Raenah-A/main/bg13.png");
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Oven */
+#oven {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    transform: scale(5);
+    transition: filter 0.1s;
+}
+
+#oven img {
+    position: absolute;
+    width: calc(7 * 80px);
+    height: calc(2 * 80px);
+}
+
+/* Mixed Counter */
+#counter {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    transform: scale(5);
+}
+
+#counter img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+
+/* Player */
+#player {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    overflow: hidden;
+}
+
+#player img {
+    position: absolute;
+    width: 520px;
+    height: 208px;
+    image-rendering: pixelated;
+}
+</style>
+</head>
+
+<body>
+<div id="game-area">
+    <div id="bg"></div>
+
+    <!-- Oven -->
+    <div id="oven">
+        <img src="https://raw.githubusercontent.com/Raenah-A/Raenah-A/main/ovenSPR1.png">
+    </div>
+
+    <!-- Mixed Counter (static) -->
+    <div id="counter">
+        <img src="https://raw.githubusercontent.com/Raenah-A/Raenah-A/main/MixedCounters.png">
+    </div>
+
+    <!-- Player -->
+    <div id="player">
+        <img src="https://raw.githubusercontent.com/Raenah-A/Raenah-A/main/Idle.png">
+    </div>
+</div>
+
+<!-- Separate JS files -->
+<script src="js/main.js"></script>
+<script src="js/oven.js"></script>
+<script src="js/counter.js"></script>
+</body>
+</html>
